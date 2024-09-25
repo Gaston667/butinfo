@@ -1,0 +1,92 @@
+De quel utilisateur s’agit-il dans la session courante ?
+— La commande whoami = etudiant
+— La commande id = 1001
+reponse: je suis le user 1001(etudiant).
+
+Quel syst`eme d’exploitation, quel noyau, quel type de machine ai-je entre les mains ?
+→ La commande uname (short for unix name) = Linux
+reponse:  je suis sur l'os lunix.
+
+Que contient mon r´epertoire domicile ?
+→ La commande ls.
+reponse: mon repertoir democile contient les repertoire Bureau, Image, Musique, Public, snap, videos, et les fichier salut.c, a.out, réels.c
+
+— Je passe la commande ls, puis ls -l, puis ls -a, puis ls -la.
+reponse: j'obtient les permissions d'accès aux fichiers. Le -a permet d'aficher tout les fichiers meme les fichiers caché. -la afficher les reponses de a combiner aux reponses de l 
+	
+— Je soumets la commande man ls, et je note la concordance avec ce que je viens d’obtenir
+par les lignes de commandes pr´ec´edentes.
+reponse: la commande man ls permet d'avoir le guide d'utilisation de la commande ls avec toute ses options 
+
+Que contient le r´epertoire /etc/ ?
+reponse: /etc/ contient plein de fichier de configuration liée à l'os
+
+
+II) je navigue dans le syst`eme de fichiers.
+Quel est mon r´epertoire de travail ?
+→ La commande pwd
+reponse: mon repertoire de travail est ~/Bureau/etudiant/SCR/tp01
+
+Je veux me placer dans le r´epertoire /etc/
+→ La commande cd.
+reponse: je tape cd ../../../../etc//
+
+Quel est mon r´epertoire de travail maintenant ?
+reponse: mon repertoire de travail est ~/etc
+
+je veux retourner `a mon r´epertoire domicile. 
+reponse la commande la plus courte est cd 
+
+
+
+III) je modifie le syst`eme de fichiers.
+Sans quitter mon domicile, je cr´ee dans mon domicile le plus long chemin
+SCR/TP1/AA/DIR1/DIR11/ de l’arborescence suivante, par une seule ligne de commande.
+reponse: mkdir -p 
+
+Je me place dans ~/SCR/TP1/ et sans bouger de cette position, je cr´ee le reste de
+l’arborescence.
+
+reponse: pour se placer cd SCR/TP1. Pour creer on a:
+mkdir -p AA/DIR1/DIR11
+mkdir -p AA/DIR2
+mkdir -p AA/DIR3
+touch AA/DIR1/DIR11/fi11
+touch AA/DIR1/DIR11/.fi112
+touch AA/DIR2/fi21
+touch AA/DIR3/fi31
+touch AA/DIR3/fi32
+
+
+1. Je consulte le contenu du r´epertoire DIR3/, puis celui du r´epertoire DIR11/
+reponse: ls AA/DIR3/, ls -a AA/DIR1/DIR11
+
+2. Je copie fi31 de DIR3/ vers DIR2/ Je consulte...
+reponse: cp AA/DIR3/fi31 AA/DIR2
+
+3. Je copie fi31 de DIR3/ vers DIR1/ en appelant la copie fi11 Je consulte...
+reponse:cp AA/DIR3/fi31 AA/DIR1/fi11
+
+4. Je fais une copie de fi31 dans DIR3/ en appelant la copie fi31cp Je consulte...
+reponse: cp AA/DIR3/fi31 AA/DIR3/fi31cp
+
+5. Je d´eplace fi31 de DIR3/ vers DIR11/ Je consulte...
+reponse: mv AA/DIR3/fi31 AA/DIR1/DIR11
+
+6. Je renomme fi31cp en fi31 Je consulte...
+REPONSE: mv AA/DIR3/fi31cp AA/DIR3/fi31
+
+7. Je renomme AA/DIR3/fi32 en AA/DIR1/DIR11/fi113 Je consulte...Je note que c’est encore un d´eplacement de fichier...
+Reponse: mv AA/DIR3/fi32 AA/DIR1/DIR11/fi113
+
+8. Je copie toute l’arborescence AA/ dans ~/SCR/TP1/ en appelant la copie BB Je consulte...
+reponse:cp AA/ BB/
+
+Je me place dans ~/SCR/TP1/BB/DIR1/DIR11/
+Sans quitter cette position, et en d´ecrivant les chemins relativement `a cette position,
+je reconstitue en ~/SCR/TP1/BB/ l’arborescence ~/SCR/TP1/AA/ de d´epart :
+1. En faisant les op´erations 7, puis 6 et 5. Je consulte...
+reponse:
+
+2. En supprimant fi31cp de BB/DIR3/, fi11 de BB/DIR1/ et fi31 de BB/DIR2/ Je consulte...
+
